@@ -2,5 +2,5 @@
 
 2020上学期工程概论大作业
 
-![task](task.jpg)
+![task](README.assets/06z58dku.png)
 
