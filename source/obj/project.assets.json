@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\warehouse management system\\warehouse management system\\warehouse management system.csproj",
+      "projectUniqueName": "E:\\Projects\\warehouse management system\\source\\warehouse management system.csproj",
       "projectName": "warehouse management system",
-      "projectPath": "E:\\Projects\\warehouse management system\\warehouse management system\\warehouse management system.csproj",
+      "projectPath": "E:\\Projects\\warehouse management system\\source\\warehouse management system.csproj",
       "packagesPath": "C:\\Users\\15978\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\warehouse management system\\warehouse management system\\obj\\",
+      "outputPath": "E:\\Projects\\warehouse management system\\source\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\15978\\AppData\\Roaming\\NuGet\\NuGet.Config",
