@@ -28,8 +28,8 @@ namespace warehouse_management_system
         int count = 0;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            count++;
-            text.Text = "点了" + count.ToString() + "下";
+            DataBase db = new DataBase();
+            db.DataInput();
         }
     }
 }
