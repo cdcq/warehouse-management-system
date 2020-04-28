@@ -1,0 +1,19 @@
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.exe
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.deps.json
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.runtimeconfig.json
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.runtimeconfig.dev.json
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.dll
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\warehouse management system.pdb
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.csprojAssemblyReference.cache
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\App.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system_MarkupCompile.cache
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system_MarkupCompile.lref
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\MainWindow.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.g.resources
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.csproj.CoreCompileInputs.cache
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.AssemblyInfoInputs.cache
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.AssemblyInfo.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.dll
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.pdb
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse management system.genruntimeconfig.cache

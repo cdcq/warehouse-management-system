@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nbnWpj3XUC2gUWnD3zth2OPSQW+g/zkCnrP/TjrxaAje93aE6fB7Ba0CcVe5dLCWgV+ryBtqdnkUSW3uUHMDkw==",
+  "dgSpecHash": "YNrn3NmCFgpkcoMH0ovsN26VTIwdLEin9h8wuRYC1hAAeQdXfZTTvbhxxfjyUjYHmnQMdqHfep7ph9D0tv6wEQ==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\warehouse management system\\source\\warehouse management system.csproj",
+  "projectFilePath": "E:\\Projects\\warehouse management system\\source\\warehouse_management_system.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

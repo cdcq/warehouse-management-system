@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TrlGm8+K3VqtqBQ6TqwTpkrOavSvjT38/9jeLxe4cmW236SJ2VlwsB4xBLgLYwAQL3pYVFvvA9ZlnqQR+D6pgg==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\warehouse management system\\source\\warehouse_management_system.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\15978\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.3\\microsoft.netcore.app.runtime.win-x86.3.1.3.nupkg.sha512",
+    "C:\\Users\\15978\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.3\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.3.nupkg.sha512",
+    "C:\\Users\\15978\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.3\\microsoft.aspnetcore.app.runtime.win-x86.3.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

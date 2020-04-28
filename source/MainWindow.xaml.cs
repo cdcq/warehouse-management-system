@@ -24,5 +24,12 @@ namespace warehouse_management_system
         {
             InitializeComponent();
         }
+
+        int count = 0;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            count++;
+            text.Text = "点了" + count.ToString() + "下";
+        }
     }
 }
