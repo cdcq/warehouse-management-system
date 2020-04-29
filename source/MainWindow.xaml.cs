@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +21,50 @@ namespace warehouse_management_system
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataBase db = new DataBase();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        int count = 0;
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
-            DataBase db = new DataBase();
-            db.DataInput();
+            Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
+            ofd.DefaultExt = ".war";
+            ofd.AddExtension = true;
+            ofd.Filter = "仓库数据文件|*.war";
+            Nullable<bool> result = ofd.ShowDialog();
+            if(result == true)
+            {
+                string filename = ofd.FileName;
+                db.LoadData(filename);
+            }
+        }
+
+        private void NewFile_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
+            sfd.FileName = "新建仓库.war";
+            sfd.DefaultExt = ".war";
+            sfd.AddExtension = true;
+            sfd.Filter = "仓库数据文件|*.war";
+            Nullable<bool> result = sfd.ShowDialog();
+            if(result == true)
+            {
+                string filename = sfd.FileName;
+                if (File.Exists(filename))
+                {
+                    File.Delete(filename);
+                }
+                File.Create(filename);
+                db.LoadData(filename);
+            }
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

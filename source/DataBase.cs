@@ -13,15 +13,17 @@ namespace warehouse_management_system
         public double worth;
         public ArrayList properties;
     }
+
     class DataBase
     {
         public ArrayList items = new ArrayList();
-        public void DataInput()
+
+        public void LoadData(string filename)
         {
-            FileStream F = new FileStream("test.dat",
+            FileStream F = new FileStream(filename,
                 FileMode.OpenOrCreate, FileAccess.ReadWrite);
             F.Close();
-            StreamReader R = new StreamReader("test.dat");
+            StreamReader R = new StreamReader(filename);
             for(string inputS = R.ReadLine(); inputS != null; inputS = R.ReadLine())
             {
                 string[] input = inputS.Split(" ");
@@ -36,6 +38,8 @@ namespace warehouse_management_system
                 }
                 items.Add(iItem);
             }
+            /*
+            //用于测试是否成功输入
             StreamWriter W = new StreamWriter("test.out");
             foreach(Item item in items)
             {
@@ -50,6 +54,7 @@ namespace warehouse_management_system
                 W.WriteLine(outputS);
             }
             W.Close();
+            */
             R.Close();
             F.Close();
         }
