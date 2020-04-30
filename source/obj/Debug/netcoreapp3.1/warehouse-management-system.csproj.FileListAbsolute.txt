@@ -17,3 +17,6 @@ E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.dll
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.pdb
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.genruntimeconfig.cache
+E:\Projects\warehouse management system\source\bin\Debug\netcoreapp3.1\resource\icons\12库存-线性.svg
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse_management_system.Properties.Resources.resources
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.csproj.GenerateResource.cache

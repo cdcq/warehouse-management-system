@@ -5,19 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:warehouse_management_system"
         mc:Ignorable="d"
-        Title="仓库管理器" Height="450" Width="800">
+        Title="仓库管理系统" Height="495" Width="800">
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="文件(_F)" Height="25">
                     <MenuItem Header="新建(_N)" Click="NewFile_Click"></MenuItem>
                     <MenuItem Header="打开(_O)" Click="OpenFile_Click"></MenuItem>
+                    <Separator></Separator>
                     <MenuItem Header="退出(_E)" Click="Exit_Click"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="分析(_A)"></MenuItem>
+                <MenuItem Header="编辑(_E)"></MenuItem>
+                <MenuItem Header="数据(_D)"></MenuItem>
+                <MenuItem Header="视图(_V)"></MenuItem>
+                <MenuItem Header="统计(_S)"></MenuItem>
                 <MenuItem Header="帮助(_H)"></MenuItem>
             </Menu>
+            <Grid DockPanel.Dock="Right">
+                <GroupBox Header="工具栏" Margin="5">
+                    <StackPanel>
+                        <Button Background="White" Margin="5">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\in.png"
+                               Height="30"/>
+                        </Button>
+                        <Button Background="White" Margin="5">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\out.png"
+                               Height="30"/>
+                        </Button>
+                        <Button Background="White" Margin="5">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\finding.png"
+                               Height="30"/>
+                        </Button>
+                        <Button Background="White" Margin="5">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\statistic.png"
+                               Height="30"/>
+                        </Button>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+            <DockPanel DockPanel.Dock="Top" Height="30">
+            </DockPanel>
             <Grid>
+                
             </Grid>
         </DockPanel>
     </Grid>
