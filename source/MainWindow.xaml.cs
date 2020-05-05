@@ -26,6 +26,11 @@ namespace warehouse_management_system
         public MainWindow()
         {
             InitializeComponent();
+
+            Binding nameBinding = new Binding();
+            nameBinding.Source = db;
+            nameBinding.Path = new PropertyPath("Name");
+            BindingOperations.SetBinding(this.nameBox, TextBlock.TextProperty, nameBinding);
         }
 
         private void OpenFile_Click(object sender, RoutedEventArgs e)
@@ -38,6 +43,7 @@ namespace warehouse_management_system
             if(result == true)
             {
                 string filename = ofd.FileName;
+                db.Name = filename;
                 db.LoadData(filename);
             }
         }
@@ -58,6 +64,7 @@ namespace warehouse_management_system
                     File.Delete(filename);
                 }
                 File.Create(filename);
+                db.Name = filename;
                 db.LoadData(filename);
             }
         }

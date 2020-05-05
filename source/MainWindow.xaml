@@ -44,6 +44,9 @@
                 </GroupBox>
             </Grid>
             <DockPanel DockPanel.Dock="Top" Height="30">
+                <GroupBox Margin="5">
+                    <TextBlock x:Name="nameBox"></TextBlock>
+                </GroupBox>
             </DockPanel>
             <Grid>
                 

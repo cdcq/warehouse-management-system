@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 
@@ -14,15 +15,26 @@ namespace warehouse_management_system
         public ArrayList properties;
     }
 
-    class DataBase
+    class DataBase:INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        public string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                if(this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
         public ArrayList items = new ArrayList();
 
         public void LoadData(string filename)
         {
-            FileStream F = new FileStream(filename,
-                FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            F.Close();
             StreamReader R = new StreamReader(filename);
             for(string inputS = R.ReadLine(); inputS != null; inputS = R.ReadLine())
             {
@@ -38,6 +50,7 @@ namespace warehouse_management_system
                 }
                 items.Add(iItem);
             }
+            R.Close();
             /*
             //用于测试是否成功输入
             StreamWriter W = new StreamWriter("test.out");
@@ -55,8 +68,6 @@ namespace warehouse_management_system
             }
             W.Close();
             */
-            R.Close();
-            F.Close();
         }
     }
 }
