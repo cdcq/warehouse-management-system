@@ -49,7 +49,36 @@
                 </GroupBox>
             </DockPanel>
             <Grid>
-                
+                <ListView x:Name="itemList" Margin="5">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="名称" Width="100"
+                                                DisplayMemberBinding="{Binding Path=Name}"/>
+                                <GridViewColumn Header="数量" Width="50"
+                                                DisplayMemberBinding="{Binding Path=Count}"/>
+                                <GridViewColumn Header="价值" Width="100"
+                                                DisplayMemberBinding="{Binding Path=Worth}"/>
+                                <GridViewColumn Header="属性" Width="400"
+                                                DisplayMemberBinding="{Binding Path=Properties}"/>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <!--
+                <ListBox x:Name="itemList" Margin="5">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Name}" Width="100"/>
+                                <TextBlock Text="{Binding Path=Count}" Width="50"/>
+                                <TextBlock Text="{Binding Path=Worth}" Width="100"/>
+                                <TextBlock Text="{Binding Path=Properties}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                -->
             </Grid>
         </DockPanel>
     </Grid>

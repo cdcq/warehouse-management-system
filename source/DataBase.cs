@@ -1,18 +1,81 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Text;
 
 namespace warehouse_management_system
 {
-    class Item
+    class Item:INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         public string name;
         public int count;
         public double worth;
         public ArrayList properties;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                if(this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
+        public int Count
+        {
+            get { return count; }
+            set
+            {
+                count = value;
+                if (this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
+        public double Worth
+        {
+            get { return worth; }
+            set
+            {
+                worth = value;
+                if (this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
+        public string Properties
+        {
+            get
+            {
+                string propertiesList = "";
+                foreach(string property in properties)
+                {
+                    propertiesList += property + "  ";
+                }
+                return propertiesList;
+            }
+            set
+            {
+                string[] propertiesList = value.Split(" ");
+                properties.Clear();
+                foreach(string property in propertiesList)
+                {
+                    properties.Add(property);
+                }
+                if (this.PropertyChanged != null)
+                {
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Properties"));
+                }
+            }
+        }
     }
 
     class DataBase:INotifyPropertyChanged
@@ -31,10 +94,10 @@ namespace warehouse_management_system
                 }
             }
         }
-        public ArrayList items = new ArrayList();
-
+        public ObservableCollection<Item> items = new ObservableCollection<Item>();
         public void LoadData(string filename)
         {
+            items.Clear();
             StreamReader R = new StreamReader(filename);
             for(string inputS = R.ReadLine(); inputS != null; inputS = R.ReadLine())
             {
@@ -51,9 +114,10 @@ namespace warehouse_management_system
                 items.Add(iItem);
             }
             R.Close();
-            /*
-            //用于测试是否成功输入
-            StreamWriter W = new StreamWriter("test.out");
+        }
+        public void StoreData(string filename)
+        {
+            StreamWriter W = new StreamWriter(filename);
             foreach(Item item in items)
             {
                 string outputS = "";
@@ -67,7 +131,6 @@ namespace warehouse_management_system
                 W.WriteLine(outputS);
             }
             W.Close();
-            */
         }
     }
 }

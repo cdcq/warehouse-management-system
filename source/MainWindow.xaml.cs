@@ -22,7 +22,6 @@ namespace warehouse_management_system
     public partial class MainWindow : Window
     {
         DataBase db = new DataBase();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -31,8 +30,11 @@ namespace warehouse_management_system
             nameBinding.Source = db;
             nameBinding.Path = new PropertyPath("Name");
             BindingOperations.SetBinding(this.nameBox, TextBlock.TextProperty, nameBinding);
-        }
 
+            this.itemList.ItemsSource = db.items;
+            //this.itemList.DisplayMemberPath = "Name";
+
+        }
         private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
@@ -47,7 +49,6 @@ namespace warehouse_management_system
                 db.LoadData(filename);
             }
         }
-
         private void NewFile_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
@@ -65,10 +66,9 @@ namespace warehouse_management_system
                 }
                 File.Create(filename);
                 db.Name = filename;
-                db.LoadData(filename);
+                db.items.Clear();
             }
         }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
