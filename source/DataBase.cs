@@ -8,13 +8,17 @@ using System.Text;
 
 namespace warehouse_management_system
 {
-    class Item:INotifyPropertyChanged
+    public class Item:INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string name;
         public int count;
         public double worth;
         public ArrayList properties;
+        public Item()
+        {
+            properties = new ArrayList();
+        }
         public string Name
         {
             get { return name; }
@@ -117,6 +121,10 @@ namespace warehouse_management_system
         }
         public void StoreData(string filename)
         {
+            if (!File.Exists(filename))
+            {
+                File.Create(filename);
+            }
             StreamWriter W = new StreamWriter(filename);
             foreach(Item item in items)
             {

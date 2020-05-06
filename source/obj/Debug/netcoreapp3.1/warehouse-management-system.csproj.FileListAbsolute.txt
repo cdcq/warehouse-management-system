@@ -19,3 +19,5 @@ E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.genruntimeconfig.cache
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse_management_system.Properties.Resources.resources
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.csproj.GenerateResource.cache
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.baml

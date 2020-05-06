@@ -73,5 +73,18 @@ namespace warehouse_management_system
         {
             this.Close();
         }
+
+        private void OpenCreat_Click(object sender, RoutedEventArgs e)
+        {
+            CreatDialog dlg = new CreatDialog();
+            dlg.Owner = this;
+            dlg.ShowDialog();
+
+            if(dlg.DialogResult == true)
+            {
+                db.items.Add(dlg.item);
+                db.StoreData(db.name);
+            }
+        }
     }
 }
