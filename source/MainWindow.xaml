@@ -29,11 +29,18 @@
                             <Image Source="E:\Projects\warehouse management system\source\resource\icons\creat.png"
                                    Height="30"/>
                         </Button>
-                        <Button Background="White" Margin="5">
+                        <Button Background="White" Margin="5"
+                                Click="Remove_Click">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\remove.png"
+                                   Height="30"/>
+                        </Button>
+                        <Button Background="White" Margin="5"
+                                Click="Input_Click">
                             <Image Source="E:\Projects\warehouse management system\source\resource\icons\input.png"
                                Height="30"/>
                         </Button>
-                        <Button Background="White" Margin="5">
+                        <Button Background="White" Margin="5"
+                                Click="Output_Click">
                             <Image Source="E:\Projects\warehouse management system\source\resource\icons\output.png"
                                Height="30"/>
                         </Button>

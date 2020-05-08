@@ -86,6 +86,11 @@ namespace warehouse_management_system
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string name;
+        public ObservableCollection<Item> items = new ObservableCollection<Item>();
+        public DataBase()
+        {
+            name = "./InitWare.war";
+        }
         public string Name
         {
             get { return name; }
@@ -98,7 +103,6 @@ namespace warehouse_management_system
                 }
             }
         }
-        public ObservableCollection<Item> items = new ObservableCollection<Item>();
         public void LoadData(string filename)
         {
             items.Clear();
@@ -121,10 +125,6 @@ namespace warehouse_management_system
         }
         public void StoreData(string filename)
         {
-            if (!File.Exists(filename))
-            {
-                File.Create(filename);
-            }
             StreamWriter W = new StreamWriter(filename);
             foreach(Item item in items)
             {

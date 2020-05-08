@@ -26,16 +26,19 @@ namespace warehouse_management_system
             nameBinding.Source = item;
             nameBinding.Path = new PropertyPath("Name");
             BindingOperations.SetBinding(this.nameBox, TextBox.TextProperty, nameBinding);
+            
             Binding countBinding = new Binding();
             countBinding.Source = item;
             countBinding.Path = new PropertyPath("Count");
             countBinding.Mode = BindingMode.OneWayToSource;
             BindingOperations.SetBinding(this.countBox, TextBox.TextProperty, countBinding);
+            
             Binding worthBinding = new Binding();
             worthBinding.Source = item;
             worthBinding.Path = new PropertyPath("Worth");
             worthBinding.Mode = BindingMode.OneWayToSource;
             BindingOperations.SetBinding(this.worthBox, TextBox.TextProperty, worthBinding);
+            
             Binding propertyBinding = new Binding();
             propertyBinding.Source = item;
             propertyBinding.Path = new PropertyPath("Properties");

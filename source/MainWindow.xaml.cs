@@ -26,6 +26,10 @@ namespace warehouse_management_system
         {
             InitializeComponent();
 
+            Init();
+        }
+        void CreatBinding()
+        {
             Binding nameBinding = new Binding();
             nameBinding.Source = db;
             nameBinding.Path = new PropertyPath("Name");
@@ -33,7 +37,16 @@ namespace warehouse_management_system
 
             this.itemList.ItemsSource = db.items;
             //this.itemList.DisplayMemberPath = "Name";
+        }
+        void Init()
+        {
+            CreatBinding();
 
+            if (!File.Exists(db.name))
+            {
+                File.Create(db.name);
+            }
+            db.LoadData(db.name);
         }
         private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
@@ -85,6 +98,43 @@ namespace warehouse_management_system
                 db.items.Add(dlg.item);
                 db.StoreData(db.name);
             }
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            Item item = itemList.SelectedItem as Item;
+            if (item != null)
+            {
+                db.items.Remove(item);
+            }
+        }
+
+        private int GetCount()
+        {
+            GetCountDialog dlg = new GetCountDialog();
+            dlg.Owner = this;
+            dlg.ShowDialog();
+
+            if(dlg.DialogResult == true && dlg.item.count > 0)
+            {
+                return dlg.item.count;
+            }
+            return 0;
+        }
+
+        private void Input_Click(object sender, RoutedEventArgs e)
+        {
+            Item item = itemList.SelectedItem as Item;
+            if(item != null)
+            {
+                db.items[db.items.IndexOf(item)].Count += GetCount();
+                db.StoreData(db.name);
+                db.LoadData(db.name);
+            }
+        }
+        private void Output_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

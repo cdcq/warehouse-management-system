@@ -21,3 +21,5 @@ E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.csproj.GenerateResource.cache
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.g.cs
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.baml
