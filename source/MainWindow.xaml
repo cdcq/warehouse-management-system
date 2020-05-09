@@ -44,9 +44,14 @@
                             <Image Source="E:\Projects\warehouse management system\source\resource\icons\output.png"
                                Height="30"/>
                         </Button>
-                        <Button Background="White" Margin="5">
-                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\finding.png"
+                        <Button Background="White" Margin="5"
+                                Click="Search_Click">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\search.png"
                                Height="30"/>
+                        </Button>
+                        <Button Background="White" Margin="5">
+                            <Image Source="E:\Projects\warehouse management system\source\resource\icons\watch.png"
+                                   Height="30"/>
                         </Button>
                         <Button Background="White" Margin="5">
                             <Image Source="E:\Projects\warehouse management system\source\resource\icons\statistic.png"
@@ -55,11 +60,9 @@
                     </StackPanel>
                 </GroupBox>
             </Grid>
-            <DockPanel DockPanel.Dock="Top" Height="30">
-                <GroupBox Margin="5">
-                    <TextBlock x:Name="nameBox"></TextBlock>
-                </GroupBox>
-            </DockPanel>
+            <GroupBox Margin="5" DockPanel.Dock="Top" Height="20">
+                <TextBlock x:Name="nameBox"></TextBlock>
+            </GroupBox>
             <Grid>
                 <ListView x:Name="itemList" Margin="5">
                     <ListView.View>
@@ -77,20 +80,6 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
-                <!--
-                <ListBox x:Name="itemList" Margin="5">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Path=Name}" Width="100"/>
-                                <TextBlock Text="{Binding Path=Count}" Width="50"/>
-                                <TextBlock Text="{Binding Path=Worth}" Width="100"/>
-                                <TextBlock Text="{Binding Path=Properties}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-                -->
             </Grid>
         </DockPanel>
     </Grid>

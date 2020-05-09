@@ -82,7 +82,7 @@ namespace warehouse_management_system
         }
     }
 
-    class DataBase:INotifyPropertyChanged
+    public class DataBase:INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string name;
@@ -109,7 +109,8 @@ namespace warehouse_management_system
             StreamReader R = new StreamReader(filename);
             for(string inputS = R.ReadLine(); inputS != null; inputS = R.ReadLine())
             {
-                string[] input = inputS.Split(" ");
+                //string[] input = inputS.Split(@" +");
+                string[] input = System.Text.RegularExpressions.Regex.Split(inputS, @" +");
                 Item iItem = new Item();
                 iItem.name = input[0];
                 iItem.count = Convert.ToInt32(input[1]);
@@ -132,9 +133,14 @@ namespace warehouse_management_system
                 outputS += item.name + " ";
                 outputS += Convert.ToString(item.count) + " ";
                 outputS += Convert.ToString(item.worth) + " ";
-                foreach(string propS in item.properties)
+                for(int i = 0; i < item.properties.Count; i++)
                 {
-                    outputS += propS + " ";
+                    string propS = item.properties[i] as string;
+                    outputS += propS;
+                    if(i != item.properties.Count - 1)
+                    {
+                        outputS = outputS + " ";
+                    }
                 }
                 W.WriteLine(outputS);
             }

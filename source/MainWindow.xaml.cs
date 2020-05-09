@@ -102,11 +102,20 @@ namespace warehouse_management_system
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            Item item = itemList.SelectedItem as Item;
-            if (item != null)
+            string messageBoxText = "确认要删除吗";
+            string caption = "警告";
+            MessageBoxButton button = MessageBoxButton.YesNo;
+            MessageBoxImage icon = MessageBoxImage.Warning;
+            MessageBoxResult result = MessageBox.Show(messageBoxText, caption, button, icon);
+            if(result == MessageBoxResult.Yes)
             {
-                db.items.Remove(item);
+                Item item = itemList.SelectedItem as Item;
+                if (item != null)
+                {
+                    db.items.Remove(item);
+                }
             }
+            db.StoreData(db.name);
         }
 
         private int GetCount()
@@ -131,10 +140,36 @@ namespace warehouse_management_system
                 db.StoreData(db.name);
                 db.LoadData(db.name);
             }
+            db.StoreData(db.name);
         }
         private void Output_Click(object sender, RoutedEventArgs e)
         {
+            Item item = itemList.SelectedItem as Item;
+            if (item != null)
+            {
+                if(db.items[db.items.IndexOf(item)].Count >= GetCount())
+                {
+                    db.items[db.items.IndexOf(item)].Count -= GetCount();
+                    db.StoreData(db.name);
+                    db.LoadData(db.name);
+                }
+                else
+                {
+                    string messageBoxText = "数量不能为负";
+                    string caption = "警告";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBox.Show(messageBoxText, caption, button, icon);
+                }
+            }
+            db.StoreData(db.name);
+        }
 
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            SearchDialog dlg = new SearchDialog();
+            dlg.db = db;
+            dlg.ShowDialog();
         }
     }
 }

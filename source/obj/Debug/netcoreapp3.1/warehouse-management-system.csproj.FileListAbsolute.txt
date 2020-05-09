@@ -23,3 +23,5 @@ E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDial
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.baml
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.g.cs
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\SearchDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\SearchDialog.baml

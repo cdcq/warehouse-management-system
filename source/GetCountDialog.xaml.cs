@@ -28,6 +28,8 @@ namespace warehouse_management_system
             countBinding.Path = new PropertyPath("Count");
             countBinding.Mode = BindingMode.OneWayToSource;
             BindingOperations.SetBinding(this.countBox, TextBox.TextProperty, countBinding);
+
+            countBox.Focus();
         }
         private void countBox_GotFocus(object sender, RoutedEventArgs e)
         {

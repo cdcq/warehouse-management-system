@@ -43,6 +43,8 @@ namespace warehouse_management_system
             propertyBinding.Source = item;
             propertyBinding.Path = new PropertyPath("Properties");
             BindingOperations.SetBinding(this.propertyBox, TextBox.TextProperty, propertyBinding);
+
+            nameBox.Focus();
         }
         private void okButton_Click(object sender, RoutedEventArgs e)
         {

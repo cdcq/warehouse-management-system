@@ -15,6 +15,9 @@
     <Compile Update="GetCountDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SearchDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CreatDialog.xaml">
@@ -24,6 +27,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SearchDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
