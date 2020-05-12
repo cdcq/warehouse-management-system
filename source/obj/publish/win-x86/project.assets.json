@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\warehouse management system\\source\\warehouse_management_system.csproj",
-      "projectName": "warehouse_management_system",
-      "projectPath": "E:\\Projects\\warehouse management system\\source\\warehouse_management_system.csproj",
+      "projectUniqueName": "E:\\Projects\\warehouse management system\\source\\warehouse-management-system.csproj",
+      "projectName": "warehouse-management-system",
+      "projectPath": "E:\\Projects\\warehouse management system\\source\\warehouse-management-system.csproj",
       "packagesPath": "C:\\Users\\15978\\.nuget\\packages\\",
       "outputPath": "E:\\Projects\\warehouse management system\\source\\obj\\publish\\win-x86\\",
       "projectStyle": "PackageReference",

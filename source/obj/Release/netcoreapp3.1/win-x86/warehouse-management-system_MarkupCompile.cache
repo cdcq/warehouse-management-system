@@ -1,0 +1,20 @@
+﻿warehouse-management-system
+
+
+winexe
+C#
+.cs
+E:\Projects\warehouse management system\source\obj\Release\netcoreapp3.1\win-x86\
+warehouse_management_system
+none
+false
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1
+E:\Projects\warehouse management system\source\App.xaml
+6243797778
+
+11243113440
+1921654412462
+AddDialog.xaml;GetCountDialog.xaml;HistoryDialog.xaml;MainWindow.xaml;SearchDialog.xaml;StatisticDialog.xaml;
+
+False
+

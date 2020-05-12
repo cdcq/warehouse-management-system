@@ -19,9 +19,13 @@ E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.genruntimeconfig.cache
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse_management_system.Properties.Resources.resources
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\warehouse-management-system.csproj.GenerateResource.cache
-E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.g.cs
-E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\CreatDialog.baml
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.g.cs
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\GetCountDialog.baml
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\SearchDialog.g.cs
 E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\SearchDialog.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\AddDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\AddDialog.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\HistoryDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\StatisticDialog.g.cs
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\HistoryDialog.baml
+E:\Projects\warehouse management system\source\obj\Debug\netcoreapp3.1\StatisticDialog.baml

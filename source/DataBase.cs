@@ -39,7 +39,7 @@ namespace warehouse_management_system
                 count = value;
                 if (this.PropertyChanged != null)
                 {
-                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Count"));
                 }
             }
         }
@@ -51,7 +51,7 @@ namespace warehouse_management_system
                 worth = value;
                 if (this.PropertyChanged != null)
                 {
-                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Name"));
+                    this.PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Worth"));
                 }
             }
         }
@@ -87,10 +87,7 @@ namespace warehouse_management_system
         public event PropertyChangedEventHandler PropertyChanged;
         public string name;
         public ObservableCollection<Item> items = new ObservableCollection<Item>();
-        public DataBase()
-        {
-            name = "./InitWare.war";
-        }
+
         public string Name
         {
             get { return name; }
@@ -145,6 +142,17 @@ namespace warehouse_management_system
                 W.WriteLine(outputS);
             }
             W.Close();
+        }
+        public bool Exist(String name)
+        {
+            foreach(Item item in items)
+            {
+                if(item.name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -9,27 +9,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="CreatDialog.xaml.cs">
+    <Compile Update="AddDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="GetCountDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HistoryDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SearchDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StatisticDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="CreatDialog.xaml">
+    <Page Update="AddDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GetCountDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HistoryDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SearchDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StatisticDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -22,6 +22,7 @@ namespace warehouse_management_system
     public partial class MainWindow : Window
     {
         DataBase db = new DataBase();
+        HistoryBase hb = new HistoryBase();
         public MainWindow()
         {
             InitializeComponent();
@@ -42,11 +43,21 @@ namespace warehouse_management_system
         {
             CreatBinding();
 
+            db.Name = "./InitWare.war";
             if (!File.Exists(db.name))
             {
-                File.Create(db.name);
+                var file = File.Create(db.name);
+                file.Close();
             }
             db.LoadData(db.name);
+
+            hb.name = db.name + ".his";
+            if (!File.Exists(hb.name))
+            {
+                var file = File.Create(hb.name);
+                file.Close();
+            }
+            hb.LoadData();
         }
         private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
@@ -60,6 +71,8 @@ namespace warehouse_management_system
                 string filename = ofd.FileName;
                 db.Name = filename;
                 db.LoadData(filename);
+                hb.name = filename + ".his";
+                hb.LoadData();
             }
         }
         private void NewFile_Click(object sender, RoutedEventArgs e)
@@ -77,9 +90,12 @@ namespace warehouse_management_system
                 {
                     File.Delete(filename);
                 }
-                File.Create(filename);
+                var file = File.Create(filename);
+                file.Close();
                 db.Name = filename;
                 db.items.Clear();
+                hb.name = filename + ".his";
+                hb.histories.Clear();
             }
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -87,16 +103,31 @@ namespace warehouse_management_system
             this.Close();
         }
 
-        private void OpenCreat_Click(object sender, RoutedEventArgs e)
+        private void OpenAdd_Click(object sender, RoutedEventArgs e)
         {
-            CreatDialog dlg = new CreatDialog();
+            AddDialog dlg = new AddDialog();
             dlg.Owner = this;
             dlg.ShowDialog();
 
             if(dlg.DialogResult == true)
             {
-                db.items.Add(dlg.item);
-                db.StoreData(db.name);
+                if (db.Exist(dlg.item.name))
+                {
+                    string messageBoxText = "名称已存在";
+                    string caption = "警告";
+                    MessageBoxButton button = MessageBoxButton.YesNo;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result = MessageBox.Show(messageBoxText, caption, button, icon);
+                }
+                else
+                {
+                    db.items.Add(dlg.item);
+                    db.StoreData(db.name);
+                    String date = DateTime.Now.ToString();
+                    History history = new History("add", dlg.item.name, dlg.item.count, dlg.item.worth, date);
+                    hb.histories.Add(history);
+                    hb.StoreData();
+                }
             }
         }
 
@@ -113,6 +144,10 @@ namespace warehouse_management_system
                 if (item != null)
                 {
                     db.items.Remove(item);
+                    String date = DateTime.Now.ToString();
+                    History history = new History("remove", item.name, item.count, item.worth, date);
+                    hb.histories.Add(history);
+                    hb.StoreData();
                 }
             }
             db.StoreData(db.name);
@@ -136,26 +171,33 @@ namespace warehouse_management_system
             Item item = itemList.SelectedItem as Item;
             if(item != null)
             {
-                db.items[db.items.IndexOf(item)].Count += GetCount();
+                int count = GetCount();
+                db.items[db.items.IndexOf(item)].Count += count;
                 db.StoreData(db.name);
-                db.LoadData(db.name);
+                String date = DateTime.Now.ToString();
+                History history = new History("input", item.name, count, item.worth, date);
+                hb.histories.Add(history);
+                hb.StoreData();
             }
-            db.StoreData(db.name);
         }
         private void Output_Click(object sender, RoutedEventArgs e)
         {
             Item item = itemList.SelectedItem as Item;
             if (item != null)
             {
-                if(db.items[db.items.IndexOf(item)].Count >= GetCount())
+                int count = GetCount();
+                if(db.items[db.items.IndexOf(item)].Count >= count)
                 {
-                    db.items[db.items.IndexOf(item)].Count -= GetCount();
+                    db.items[db.items.IndexOf(item)].Count -= count;
                     db.StoreData(db.name);
-                    db.LoadData(db.name);
+                    String date = DateTime.Now.ToString();
+                    History history = new History("output", item.name, count, item.worth, date);
+                    hb.histories.Add(history);
+                    hb.StoreData();
                 }
                 else
                 {
-                    string messageBoxText = "数量不能为负";
+                    string messageBoxText = "库存不足";
                     string caption = "警告";
                     MessageBoxButton button = MessageBoxButton.OK;
                     MessageBoxImage icon = MessageBoxImage.Warning;
@@ -169,6 +211,18 @@ namespace warehouse_management_system
         {
             SearchDialog dlg = new SearchDialog();
             dlg.db = db;
+            dlg.ShowDialog();
+        }
+
+        private void Statistic_Click(object sender, RoutedEventArgs e)
+        {
+            StatisticDialog dlg = new StatisticDialog(db);
+            dlg.ShowDialog();
+        }
+
+        private void History_Click(object sender, RoutedEventArgs e)
+        {
+            HistoryDialog dlg = new HistoryDialog(hb);
             dlg.ShowDialog();
         }
     }

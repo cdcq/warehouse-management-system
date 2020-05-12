@@ -39,7 +39,7 @@ namespace warehouse_management_system {
     /// <summary>
     /// CreatDialog
     /// </summary>
-    public partial class CreatDialog : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class AddDialog : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 22 "..\..\..\CreatDialog.xaml"

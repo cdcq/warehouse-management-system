@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 E:\Projects\warehouse management system\source\App.xaml
-41836730589
+6243797778
 
-8-903090899
+11243113440
 1921654412462
-CreatDialog.xaml;GetCountDialog.xaml;MainWindow.xaml;SearchDialog.xaml;
+AddDialog.xaml;GetCountDialog.xaml;HistoryDialog.xaml;MainWindow.xaml;SearchDialog.xaml;StatisticDialog.xaml;
 
 False
 
