@@ -9,6 +9,52 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resource\icons\add.png" />
+    <None Remove="resource\icons\history.png" />
+    <None Remove="resource\icons\input.png" />
+    <None Remove="resource\icons\opening.png" />
+    <None Remove="resource\icons\output.png" />
+    <None Remove="resource\icons\remove.png" />
+    <None Remove="resource\icons\saving.png" />
+    <None Remove="resource\icons\search.png" />
+    <None Remove="resource\icons\statistic.png" />
+    <None Remove="resource\icons\watch.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resource\icons\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\history.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\input.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\opening.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\output.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\remove.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\saving.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\statistic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\icons\watch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

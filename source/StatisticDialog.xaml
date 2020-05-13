@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:warehouse_management_system"
         mc:Ignorable="d"
-        Title="基本统计" Height="200" Width="400">
+        Title="基本统计" Height="150" Width="400">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>

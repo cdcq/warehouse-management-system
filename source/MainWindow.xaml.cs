@@ -225,5 +225,9 @@ namespace warehouse_management_system
             HistoryDialog dlg = new HistoryDialog(hb);
             dlg.ShowDialog();
         }
+
+        private void Document_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
